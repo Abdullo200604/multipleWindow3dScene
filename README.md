@@ -1,41 +1,65 @@
 # Multiple Window 3D Scene using Three.js
 
-## Introduction
-This project demonstrates a unique approach to creating and managing a 3D scene across multiple browser windows using Three.js and localStorage. It's designed for developers interested in advanced web graphics and window management techniques.
+## 📌 Introduction
+This project demonstrates an advanced technique for rendering and synchronizing a 3D scene across multiple browser windows using [Three.js](https://threejs.org) and the browser's `localStorage`. It's aimed at developers exploring interactive multi-window 3D applications.
 
-## Features
-- 3D scene creation and rendering with Three.js.
-- Synchronization of 3D scenes across multiple browser windows.
-- Dynamic window management and state synchronization using localStorage.
+## ✨ Features
+- 🌐 Real-time 3D scene rendering with Three.js
+- 🪟 Multi-window scene synchronization
+- 📦 Dynamic window state management using `localStorage`
+- 🧠 Modular architecture (`main.js` + `WindowManager.js`)
 
-## Installation
-Clone the repository and open `index.html` in your browser to start exploring the 3D scene.
+## 🚀 Getting Started
 
-```
-git clone https://github.com/bgstaal/multipleWindow3dScene
-```
-## Usage
-The main application logic is contained within `main.js` and `WindowManager.js`. The 3D scene is rendered in `index.html`, which serves as the entry point of the application.
+### ✅ Clone the repository
 
-## Structure and Components
-- `index.html`: Entry point that sets up the HTML structure and includes the Three.js library and the main script.
-- `WindowManager.js`: Core class managing window creation, synchronization, and state management across multiple windows.
-- `main.js`: Contains the logic for initializing the 3D scene, handling window events, and rendering the scene.
-- `three.r124.min.js`: Minified version of the Three.js library used for 3D graphics rendering.
+```bash
+git clone https://github.com/Abdullo200604/multipleWindow3dScene.git
+▶️ Run the project
+Simply open index.html in your browser — no build tools or servers required.
 
-## Detailed Functionality
-- `WindowManager.js` handles the lifecycle of multiple browser windows, including creation, synchronization, and removal. It uses localStorage to maintain state across windows.
-- `main.js` initializes the 3D scene using Three.js, manages the window's resize events, and updates the scene based on window interactions.
+Or, for a quick local server:
 
-## Contributing
-Contributions to enhance or expand the project are welcome. Feel free to fork the repository, make changes, and submit pull requests.
+bash
+Копировать
+Редактировать
+# Python 3
+python -m http.server 8000
+# Then open http://localhost:8000 in your browser
+📁 Project Structure
+File / Folder	Description
+index.html	Main HTML file. Loads the 3D scene and scripts.
+main.js	Initializes and renders the Three.js scene, manages events.
+WindowManager.js	Handles multi-window management and synchronization via localStorage.
+three.r124.min.js	Minified Three.js library used for rendering.
 
-## License
-This project is open-sourced under the MIT License.
+⚙️ How It Works
+Each opened window creates a new instance with metadata (ID, size, position).
 
-## Acknowledgments
-- The Three.js team for their comprehensive 3D library.
-- x.com/didntdrinkwater for this readme.
+WindowManager.js synchronizes window data across all open tabs using localStorage.
 
-## Contact
-For more information and updates, follow [@_nonfigurativ_](https://twitter.com/_nonfigurativ_) on Twitter.
+main.js renders the 3D scene (customizable) for each window and updates it on resize or movement.
+
+🧱 Technologies Used
+Three.js — for 3D rendering
+
+Native JavaScript (ES6+ modules)
+
+Browser APIs: localStorage, window.resize, beforeunload
+
+🤝 Contributing
+Contributions are welcome!
+Fork the repository, create a new branch, make your changes, and submit a pull request. Suggestions for new features, improvements, or bug fixes are appreciated.
+
+📜 License
+This project is open-source and licensed under the MIT License.
+
+🙏 Acknowledgments
+Three.js — for the powerful and easy-to-use 3D engine
+
+Original idea inspired by bgstaal/multipleWindow3dScene
+
+Special thanks to the open-source community
+
+👤 Author
+Maintained by @Abdullo200604
